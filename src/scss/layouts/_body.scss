@@ -1,0 +1,19 @@
+#root {
+  background-color: #e0e6ee;
+  padding-bottom: 30px;
+  min-height: 100vh;
+}
+
+.divider {
+  height: 1px;
+  background-image: linear-gradient(
+    90deg,
+    #fff,
+    #fff 75%,
+    transparent 75%,
+    transparent 100%
+  );
+  background-size: 20px 1px;
+  border: none;
+  margin-top: 25px;
+}

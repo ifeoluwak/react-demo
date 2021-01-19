@@ -1,0 +1,27 @@
+.mobile_details {
+  > div:nth-child(even) {
+    background-color: rgba(229, 229, 229, 0.5);
+  }
+
+  > div {
+    padding: 10px;
+  }
+}
+
+.row-item {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: normal;
+
+  p {
+    flex: 1;
+    font-family: $font-family;
+    text-align: left;
+    color: $secondary-color;
+  }
+}
+
+.row-item:nth-child(1) p:nth-child(2) {
+  color: $primary-color;
+}

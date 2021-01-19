@@ -1,0 +1,35 @@
+// Basic Button Style
+button {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: $btn-color;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  //   display: flex;
+  //   align-self: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  //   margin: 20px;
+  padding: 1em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-family;
+  font-weight: 700;
+  width: 160px;
+  //   justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+    background-color: $btn-color;
+  }
+
+  &:disabled {
+    background-color: $bkground-color;
+  }
+}

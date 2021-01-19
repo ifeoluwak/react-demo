@@ -1,0 +1,103 @@
+.form {
+  //   width: 70vw;
+  //   background: yellow;
+  font-family: $font_family;
+  font-size: 12px;
+  color: $form-color;
+  text-align: left;
+  padding: 0 40px;
+
+  .form_row {
+    margin-bottom: 20px;
+  }
+
+  input {
+    padding: 0.25rem 0;
+    border: 0;
+    border-bottom: 1px solid #999999;
+    outline: 0;
+    background: transparent;
+    color: $secondary_color;
+    font-size: 16px;
+    // font-family: $font_family;
+    line-height: 19.2px;
+    letter-spacing: 0.125rem;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .errorDiv {
+    color: $secondary-color;
+    border: 1px solid $error;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.5);
+    padding: 10px 15px;
+    color: $error;
+  }
+  .error {
+    color: $error;
+  }
+
+  .selectedPlanet {
+    width: 122px;
+    height: 32px;
+    border: 1px solid #999999;
+    border-radius: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 3px;
+
+    span {
+      position: relative;
+      left: 12px;
+    }
+  }
+
+  .search_input {
+    position: relative;
+  }
+
+  .search_icon {
+    position: absolute;
+    right: 5px;
+  }
+  .searchResultsBox {
+    color: $secondary-color;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.5);
+
+    p {
+      font-size: 16px;
+      padding: 10px 15px;
+    }
+    p:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
+  .addMovie {
+    text-align: right;
+  }
+}
+
+@include small-breakpoint {
+  .form {
+    padding: 20px 40px;
+  }
+
+  .form input {
+    font-size: 12px;
+  }
+
+  .search_icon {
+    display: none;
+  }
+
+  .addMovie button {
+    width: 100%;
+  }
+}

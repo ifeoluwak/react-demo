@@ -1,0 +1,70 @@
+.accordion {
+  margin: 0 auto;
+  width: 80%;
+
+  .title {
+    padding: 20px 30px;
+    cursor: pointer;
+    transform: translate3d(0, 0, 0);
+    color: #00687f;
+    position: relative;
+    font-size: 16px;
+    background: #fff;
+    margin-bottom: -1px;
+    text-align: left;
+    box-shadow: 0px 4px 12px rgba(224, 230, 238, 0.5);
+    border-radius: 4px;
+    font-family: $font-family;
+    font-weight: bold;
+
+    &::after {
+      content: url("../images/arrow_open.svg");
+      font-size: 18px;
+      color: #00687f;
+      position: absolute;
+      right: 30px;
+    }
+
+    &.is-expanded {
+      // transition: background 0.5s;
+      // background: #0e4671;
+
+      &::after {
+        content: url("../images/arrow_close.svg");
+      }
+    }
+  }
+
+  .content {
+    overflow: hidden;
+    // max-height: 0;
+    transition: max-height 0.5s;
+    margin: 0;
+    // border: solid 1px #eeeeee;
+    border-top: 0;
+    background: #fff;
+    box-shadow: 0px 2px 1px rgba(196, 196, 196, 0.2);
+
+    p {
+      padding: 10px 0;
+      margin: 0;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    &.is-expanded {
+      min-height: 200px;
+      padding: 30px;
+      overflow: hidden;
+      p {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include small-breakpoint {
+  .accordion .content.is-expanded {
+    padding: 0;
+  }
+}
