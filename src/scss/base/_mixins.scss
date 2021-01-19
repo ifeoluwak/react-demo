@@ -4,17 +4,3 @@
     @content;
   }
 }
-
-// Break on tablet
-@mixin medium-breakpoint {
-  @media (min-width: #{$tablet}) {
-    @content;
-  }
-}
-
-// Break on desktop
-@mixin large-breakpoint {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
-}

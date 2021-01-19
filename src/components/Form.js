@@ -67,7 +67,7 @@ const Form = (props) => {
       movieId: episode_id,
       planets: selectedPlanets,
     };
-    
+
     await Promise.all([
       props.savePlanets(newPlanets),
       props.saveMovies({ movie: newMovie }),

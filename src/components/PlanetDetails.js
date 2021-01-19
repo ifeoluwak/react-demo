@@ -24,14 +24,21 @@ const PlanetDetails = ({
   }, [planets]);
 
   const SortView = ({ id }) => {
+    const { type, key } = sortedState;
     return (
       <>
         <span
-          className="sort-up"
+          className={
+            type === "asc" && key === id ? "sorted-up sort-up" : "sort-up"
+          }
           onClick={() => setSortedState({ type: "asc", key: id })}
         ></span>
         <span
-          className="sort-down"
+          className={
+            type === "desc" && key === id
+              ? "sorted-down sort-down"
+              : "sort-down"
+          }
           onClick={() => setSortedState({ type: "desc", key: id })}
         ></span>
       </>

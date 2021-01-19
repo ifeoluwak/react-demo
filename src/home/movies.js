@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import Accordion from "./components/Accordion";
+import Accordion from "../components/Accordion";
 
-export const Application = (props) => {
+export const MovieList = (props) => {
   const [accordionKeys, setAccordionKeys] = useState({});
   const [initial, setInitial] = useState({});
 
@@ -39,6 +39,6 @@ export const Application = (props) => {
   );
 };
 
-Application.PropTypes = {
+MovieList.PropTypes = {
   movies: PropTypes.array,
 };

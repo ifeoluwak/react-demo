@@ -1,5 +1,8 @@
 import { reducerActions } from "../reducer";
 
+const parseUrl = (url = "") =>
+  url.includes("https") ? url : url.replace("http", "https");
+
 export const planet = {
   state: {
     isServerError: false,
@@ -13,7 +16,9 @@ export const planet = {
       const { planets, movieId } = payload;
       if (!planets.length || data[movieId]) return;
       try {
-        const response = await Promise.all(planets.map((i) => fetch(i)));
+        const response = await Promise.all(
+          planets.map((url) => fetch(parseUrl(url)))
+        );
         const planetResponse = await Promise.all(
           response.map(async (i) => {
             let planet = await i.json();

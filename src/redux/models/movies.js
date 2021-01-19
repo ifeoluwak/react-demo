@@ -10,7 +10,7 @@ export const movies = {
     async getMovies(payload, rootState) {
       dispatch.movies.setError(false);
       try {
-        const data = await fetch("https://swapi.dev/api/films");
+        const data = await fetch("https://swapi.dev/api/films/");
         const res = await data.json();
         dispatch.movies.setState({ data: res.results });
       } catch (error) {

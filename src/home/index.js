@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Lottie from "lottie-react";
 import PropTypes from "prop-types";
 
-import { Application } from "../movies";
+import { MovieList } from "./movies";
 import LoadingPulse from "../images/loading.json";
 import Logo from "../images/logo.svg";
 import AddMovieForm from "../components/AddMovieForm";
@@ -32,7 +32,7 @@ const Home = ({ movies, loading, getMovies }) => {
           />
         </div>
       ) : (
-        <Application movies={movies} />
+        <MovieList movies={movies} />
       )}
       <AddMovieForm />
     </div>

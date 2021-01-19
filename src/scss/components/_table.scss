@@ -34,11 +34,6 @@ td {
   width: 14.29%;
 }
 
-th span,
-td span {
-  // display: block;
-  // width: 100%;
-}
 th span {
   position: relative;
 }
@@ -60,9 +55,7 @@ span.sort-up:before {
 span.sort-down:after {
   content: "\25bc";
 }
-span.sorted-up:before {
-  color: red;
-}
+span.sorted-up:before,
 span.sorted-down:after {
-  color: red;
+  color: $primary-color;
 }
